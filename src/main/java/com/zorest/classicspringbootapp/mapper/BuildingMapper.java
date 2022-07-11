@@ -17,7 +17,11 @@ public class BuildingMapper implements EntityMapper<Building, BuildingDto> {
     }
 
     @Override
-    public BuildingDto toDto(Building toEntity) {
-        return null;
+    public BuildingDto toDto(Building entity) {
+        BuildingDto dto = new BuildingDto();
+        dto.setId(entity.getId());
+        dto.setName(entity.getName());
+        dto.setFloors(entity.getFloors());
+        return dto;
     }
 }
